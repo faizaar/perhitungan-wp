@@ -1,0 +1,54 @@
+ERROR - 2024-12-03 04:12:29 --> mysqli_sql_exception: Table 'db_ppa.v_total_skor' doesn't exist in C:\laragon\www\Project009\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\laragon\www\Project009\system\Database\MySQLi\Connection.php(312): mysqli->query('select * from v...', 0)
+#1 C:\laragon\www\Project009\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('select * from v...')
+#2 C:\laragon\www\Project009\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('select * from v...')
+#3 C:\laragon\www\Project009\app\Models\datahasil_model.php(16): CodeIgniter\Database\BaseConnection->query('select * from v...')
+#4 C:\laragon\www\Project009\app\Controllers\Home.php(191): App\Models\datahasil_model->tampilhasil()
+#5 C:\laragon\www\Project009\system\CodeIgniter.php(933): App\Controllers\Home->viewhasil()
+#6 C:\laragon\www\Project009\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\laragon\www\Project009\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\Project009\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\Project009\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\laragon\www\Project009\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\laragon\www\Project009\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2024-12-03 04:12:29 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_ppa.v_total_skor' doesn't exist
+[Method: GET, Route: Home/viewhasil]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 APPPATH\Models\datahasil_model.php(16): CodeIgniter\Database\BaseConnection->query('select * from v_total_skor')
+ 2 APPPATH\Controllers\Home.php(191): App\Models\datahasil_model->tampilhasil()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->viewhasil()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Project009\\public\\index.php')
+CRITICAL - 2024-12-03 04:12:29 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_ppa.v_total_skor' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('select * from v_total_skor')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('select * from v_total_skor')
+ 3 APPPATH\Models\datahasil_model.php(16): CodeIgniter\Database\BaseConnection->query('select * from v_total_skor')
+ 4 APPPATH\Controllers\Home.php(191): App\Models\datahasil_model->tampilhasil()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->viewhasil()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Project009\\public\\index.php')
+CRITICAL - 2024-12-03 04:12:29 --> [Caused by] mysqli_sql_exception: Table 'db_ppa.v_total_skor' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('select * from v_total_skor', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('select * from v_total_skor')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('select * from v_total_skor')
+ 4 APPPATH\Models\datahasil_model.php(16): CodeIgniter\Database\BaseConnection->query('select * from v_total_skor')
+ 5 APPPATH\Controllers\Home.php(191): App\Models\datahasil_model->tampilhasil()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->viewhasil()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Project009\\public\\index.php')

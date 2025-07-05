@@ -1,0 +1,602 @@
+INFO - 2024-12-07 04:57:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-07 05:02:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-07 05:11:40 --> CodeIgniter\Database\Exceptions\DataException: Allowed fields must be specified for model: "App\Models\datakriteria_model"
+[Method: POST, Route: Home/simpanKriteria]
+in SYSTEMPATH\Model.php on line 824.
+ 1 SYSTEMPATH\Model.php(824): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\datakriteria_model')
+ 2 SYSTEMPATH\BaseModel.php(821): CodeIgniter\Model->doProtectFieldsForInsert([...])
+ 3 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 4 APPPATH\Controllers\Home.php(67): CodeIgniter\Model->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->simpanK()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Project009\\public\\index.php')
+ERROR - 2024-12-07 05:13:49 --> mysqli_sql_exception: Duplicate entry '8' for key 'kriteria.PRIMARY' in C:\laragon\www\Project009\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\laragon\www\Project009\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `kr...', 0)
+#1 C:\laragon\www\Project009\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `kr...')
+#2 C:\laragon\www\Project009\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `kr...')
+#3 C:\laragon\www\Project009\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `kr...', Array, false)
+#4 C:\laragon\www\Project009\app\Models\datakriteria_model.php(40): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\Project009\app\Controllers\Home.php(67): App\Models\datakriteria_model->saveA('kriteria', Array)
+#6 C:\laragon\www\Project009\system\CodeIgniter.php(933): App\Controllers\Home->simpanK()
+#7 C:\laragon\www\Project009\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\laragon\www\Project009\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\Project009\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\Project009\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\Project009\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\laragon\www\Project009\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#13 {main}
+CRITICAL - 2024-12-07 05:13:49 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '8' for key 'kriteria.PRIMARY'
+[Method: POST, Route: Home/simpanKriteria]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `kriteria` (`kriteria_id`, `nama`, `bobot`, `tipe`) VALUES (:kriteria_id:, :nama:, :bobot:, :tipe:)', [...], false)
+ 2 APPPATH\Models\datakriteria_model.php(40): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Home.php(67): App\Models\datakriteria_model->saveA('kriteria', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->simpanK()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Project009\\public\\index.php')
+CRITICAL - 2024-12-07 05:13:49 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '8' for key 'kriteria.PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `kriteria` (`kriteria_id`, `nama`, `bobot`, `tipe`) VALUES (\'8\', \'Emosi\', \'3\', \'Cost\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `kriteria` (`kriteria_id`, `nama`, `bobot`, `tipe`) VALUES (\'8\', \'Emosi\', \'3\', \'Cost\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `kriteria` (`kriteria_id`, `nama`, `bobot`, `tipe`) VALUES (:kriteria_id:, :nama:, :bobot:, :tipe:)', [...], false)
+ 4 APPPATH\Models\datakriteria_model.php(40): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 APPPATH\Controllers\Home.php(67): App\Models\datakriteria_model->saveA('kriteria', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->simpanK()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Project009\\public\\index.php')
+CRITICAL - 2024-12-07 05:13:49 --> [Caused by] mysqli_sql_exception: Duplicate entry '8' for key 'kriteria.PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `kriteria` (`kriteria_id`, `nama`, `bobot`, `tipe`) VALUES (\'8\', \'Emosi\', \'3\', \'Cost\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `kriteria` (`kriteria_id`, `nama`, `bobot`, `tipe`) VALUES (\'8\', \'Emosi\', \'3\', \'Cost\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `kriteria` (`kriteria_id`, `nama`, `bobot`, `tipe`) VALUES (\'8\', \'Emosi\', \'3\', \'Cost\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `kriteria` (`kriteria_id`, `nama`, `bobot`, `tipe`) VALUES (:kriteria_id:, :nama:, :bobot:, :tipe:)', [...], false)
+ 5 APPPATH\Models\datakriteria_model.php(40): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Home.php(67): App\Models\datakriteria_model->saveA('kriteria', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->simpanK()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Project009\\public\\index.php')
+INFO - 2024-12-07 05:14:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-07 05:18:44 --> ErrorException: Undefined variable $kriteria
+[Method: GET, Route: Home/editkriteria/8]
+in APPPATH\Views\update_kriteria.php on line 9.
+ 1 APPPATH\Views\update_kriteria.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kriteria', 'C:\\laragon\\www\\Project009\\app\\Views\\update_kriteria.php', 9)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\Project009\\app\\Views\\update_kriteria.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('update_kriteria', [], true)
+ 5 APPPATH\Controllers\Home.php(156): view('update_kriteria')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->formEditKriteria('8')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Project009\\public\\index.php')
+CRITICAL - 2024-12-07 05:23:27 --> ErrorException: Undefined property: stdClass::$polisi_id
+[Method: GET, Route: Home/editkriteria/8]
+in APPPATH\Views\formedit.php on line 10.
+ 1 APPPATH\Views\formedit.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$polisi_id', 'C:\\laragon\\www\\Project009\\app\\Views\\formedit.php', 10)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\Project009\\app\\Views\\formedit.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('formedit', [], true)
+ 5 APPPATH\Controllers\Home.php(157): view('formedit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->formEditKriteria('8')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Project009\\public\\index.php')
+CRITICAL - 2024-12-07 05:23:28 --> ErrorException: Undefined property: stdClass::$polisi_id
+[Method: GET, Route: Home/editkriteria/8]
+in APPPATH\Views\formedit.php on line 10.
+ 1 APPPATH\Views\formedit.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$polisi_id', 'C:\\laragon\\www\\Project009\\app\\Views\\formedit.php', 10)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\Project009\\app\\Views\\formedit.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('formedit', [], true)
+ 5 APPPATH\Controllers\Home.php(157): view('formedit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->formEditKriteria('8')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Project009\\public\\index.php')
+CRITICAL - 2024-12-07 05:26:52 --> ErrorException: Undefined property: stdClass::$polisi_id
+[Method: GET, Route: Home/editkriteria/8]
+in APPPATH\Views\edit_kriteria.php on line 10.
+ 1 APPPATH\Views\edit_kriteria.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$polisi_id', 'C:\\laragon\\www\\Project009\\app\\Views\\edit_kriteria.php', 10)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\Project009\\app\\Views\\edit_kriteria.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('edit_kriteria', [], true)
+ 5 APPPATH\Controllers\Home.php(157): view('edit_kriteria', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->formEditKriteria('8')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Project009\\public\\index.php')
+CRITICAL - 2024-12-07 05:27:54 --> ErrorException: Undefined property: stdClass::$polisi_id
+[Method: GET, Route: Home/editkriteria/8]
+in APPPATH\Views\edit_kriteria.php on line 13.
+ 1 APPPATH\Views\edit_kriteria.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$polisi_id', 'C:\\laragon\\www\\Project009\\app\\Views\\edit_kriteria.php', 13)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\Project009\\app\\Views\\edit_kriteria.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('edit_kriteria', [], true)
+ 5 APPPATH\Controllers\Home.php(157): view('edit_kriteria', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->formEditKriteria('8')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Project009\\public\\index.php')
+INFO - 2024-12-07 05:31:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-07 05:55:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-07 06:35:41 --> ErrorException: Undefined variable $alternatifs
+[Method: GET, Route: Home/tambahkonversi]
+in APPPATH\Views\tambah_konversi.php on line 18.
+ 1 APPPATH\Views\tambah_konversi.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $alternatifs', 'C:\\laragon\\www\\Project009\\app\\Views\\tambah_konversi.php', 18)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\Project009\\app\\Views\\tambah_konversi.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('tambah_konversi', [], true)
+ 5 APPPATH\Controllers\Home.php(266): view('tambah_konversi')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->tambahKonversi()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Project009\\public\\index.php')
+CRITICAL - 2024-12-07 06:36:05 --> TypeError: CodeIgniter\Database\BaseResult::getResult(): Argument #1 ($type) must be of type string, null given, called in C:\laragon\www\Project009\system\Model.php on line 287
+[Method: GET, Route: Home/tambahkonversi]
+in SYSTEMPATH\Database\BaseResult.php on line 106.
+ 1 SYSTEMPATH\Model.php(287): CodeIgniter\Database\BaseResult->getResult(null)
+ 2 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 3 APPPATH\Controllers\Home.php(266): CodeIgniter\BaseModel->findAll()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->tambahKonversi()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Project009\\public\\index.php')
+CRITICAL - 2024-12-07 06:36:38 --> TypeError: CodeIgniter\Database\BaseResult::getResult(): Argument #1 ($type) must be of type string, null given, called in C:\laragon\www\Project009\system\Model.php on line 287
+[Method: GET, Route: Home/tambahkonversi]
+in SYSTEMPATH\Database\BaseResult.php on line 106.
+ 1 SYSTEMPATH\Model.php(287): CodeIgniter\Database\BaseResult->getResult(null)
+ 2 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 3 APPPATH\Controllers\Home.php(266): CodeIgniter\BaseModel->findAll()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->tambahKonversi()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Project009\\public\\index.php')
+CRITICAL - 2024-12-07 06:38:47 --> TypeError: CodeIgniter\Database\BaseResult::getResult(): Argument #1 ($type) must be of type string, null given, called in C:\laragon\www\Project009\system\Model.php on line 287
+[Method: GET, Route: Home/tambahkonversi]
+in SYSTEMPATH\Database\BaseResult.php on line 106.
+ 1 SYSTEMPATH\Model.php(287): CodeIgniter\Database\BaseResult->getResult(null)
+ 2 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 3 APPPATH\Controllers\Home.php(266): CodeIgniter\BaseModel->findAll()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->tambahKonversi()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Project009\\public\\index.php')
+CRITICAL - 2024-12-07 06:39:09 --> TypeError: CodeIgniter\Database\BaseResult::getResult(): Argument #1 ($type) must be of type string, null given, called in C:\laragon\www\Project009\system\Model.php on line 287
+[Method: GET, Route: Home/tambahkonversi]
+in SYSTEMPATH\Database\BaseResult.php on line 106.
+ 1 SYSTEMPATH\Model.php(287): CodeIgniter\Database\BaseResult->getResult(null)
+ 2 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 3 APPPATH\Controllers\Home.php(266): CodeIgniter\BaseModel->findAll()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->tambahKonversi()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Project009\\public\\index.php')
+CRITICAL - 2024-12-07 06:39:13 --> TypeError: CodeIgniter\Database\BaseResult::getResult(): Argument #1 ($type) must be of type string, null given, called in C:\laragon\www\Project009\system\Model.php on line 287
+[Method: GET, Route: Home/tambahkonversi]
+in SYSTEMPATH\Database\BaseResult.php on line 106.
+ 1 SYSTEMPATH\Model.php(287): CodeIgniter\Database\BaseResult->getResult(null)
+ 2 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 3 APPPATH\Controllers\Home.php(266): CodeIgniter\BaseModel->findAll()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->tambahKonversi()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Project009\\public\\index.php')
+CRITICAL - 2024-12-07 06:39:52 --> TypeError: CodeIgniter\Database\BaseResult::getResult(): Argument #1 ($type) must be of type string, null given, called in C:\laragon\www\Project009\system\Model.php on line 287
+[Method: GET, Route: Home/tambahkonversi]
+in SYSTEMPATH\Database\BaseResult.php on line 106.
+ 1 SYSTEMPATH\Model.php(287): CodeIgniter\Database\BaseResult->getResult(null)
+ 2 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 3 APPPATH\Controllers\Home.php(266): CodeIgniter\BaseModel->findAll()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->tambahKonversi()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Project009\\public\\index.php')
+CRITICAL - 2024-12-07 06:41:27 --> TypeError: CodeIgniter\Database\BaseResult::getResult(): Argument #1 ($type) must be of type string, null given, called in C:\laragon\www\Project009\system\Model.php on line 287
+[Method: GET, Route: Home/tambahkonversi]
+in SYSTEMPATH\Database\BaseResult.php on line 106.
+ 1 SYSTEMPATH\Model.php(287): CodeIgniter\Database\BaseResult->getResult(null)
+ 2 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 3 APPPATH\Controllers\Home.php(266): CodeIgniter\BaseModel->findAll()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->tambahKonversi()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Project009\\public\\index.php')
+CRITICAL - 2024-12-07 06:41:55 --> ErrorException: Undefined variable $alternatifs
+[Method: GET, Route: Home/tambahkonversi]
+in APPPATH\Views\tambah_konversi.php on line 18.
+ 1 APPPATH\Views\tambah_konversi.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $alternatifs', 'C:\\laragon\\www\\Project009\\app\\Views\\tambah_konversi.php', 18)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\Project009\\app\\Views\\tambah_konversi.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('tambah_konversi', [], true)
+ 5 APPPATH\Controllers\Home.php(265): view('tambah_konversi')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->tambahKonversi()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Project009\\public\\index.php')
+INFO - 2024-12-07 06:45:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-07 06:47:25 --> mysqli_sql_exception: Duplicate entry '25' for key 'konversi_data.PRIMARY' in C:\laragon\www\Project009\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\laragon\www\Project009\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `ko...', 0)
+#1 C:\laragon\www\Project009\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ko...')
+#2 C:\laragon\www\Project009\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ko...')
+#3 C:\laragon\www\Project009\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ko...', Array, false)
+#4 C:\laragon\www\Project009\app\Models\datakonversi_model.php(27): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\Project009\app\Controllers\Home.php(103): App\Models\datakonversi_model->saveA('konversi_data', Array)
+#6 C:\laragon\www\Project009\system\CodeIgniter.php(933): App\Controllers\Home->simpanKv()
+#7 C:\laragon\www\Project009\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\laragon\www\Project009\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\Project009\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\Project009\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\Project009\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\laragon\www\Project009\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#13 {main}
+CRITICAL - 2024-12-07 06:47:25 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '25' for key 'konversi_data.PRIMARY'
+[Method: POST, Route: Home/simpankonversi]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `konversi_data` (`id`, `polisi_id`, `kriteria_id`, `nilai`) VALUES (:id:, :polisi_id:, :kriteria_id:, :nilai:)', [...], false)
+ 2 APPPATH\Models\datakonversi_model.php(27): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Home.php(103): App\Models\datakonversi_model->saveA('konversi_data', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->simpanKv()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Project009\\public\\index.php')
+CRITICAL - 2024-12-07 06:47:25 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '25' for key 'konversi_data.PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `konversi_data` (`id`, `polisi_id`, `kriteria_id`, `nilai`) VALUES (\'25\', \'4\', \'1\', \'3\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `konversi_data` (`id`, `polisi_id`, `kriteria_id`, `nilai`) VALUES (\'25\', \'4\', \'1\', \'3\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `konversi_data` (`id`, `polisi_id`, `kriteria_id`, `nilai`) VALUES (:id:, :polisi_id:, :kriteria_id:, :nilai:)', [...], false)
+ 4 APPPATH\Models\datakonversi_model.php(27): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 APPPATH\Controllers\Home.php(103): App\Models\datakonversi_model->saveA('konversi_data', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->simpanKv()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Project009\\public\\index.php')
+CRITICAL - 2024-12-07 06:47:25 --> [Caused by] mysqli_sql_exception: Duplicate entry '25' for key 'konversi_data.PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `konversi_data` (`id`, `polisi_id`, `kriteria_id`, `nilai`) VALUES (\'25\', \'4\', \'1\', \'3\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `konversi_data` (`id`, `polisi_id`, `kriteria_id`, `nilai`) VALUES (\'25\', \'4\', \'1\', \'3\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `konversi_data` (`id`, `polisi_id`, `kriteria_id`, `nilai`) VALUES (\'25\', \'4\', \'1\', \'3\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `konversi_data` (`id`, `polisi_id`, `kriteria_id`, `nilai`) VALUES (:id:, :polisi_id:, :kriteria_id:, :nilai:)', [...], false)
+ 5 APPPATH\Models\datakonversi_model.php(27): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Home.php(103): App\Models\datakonversi_model->saveA('konversi_data', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->simpanKv()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Project009\\public\\index.php')
+INFO - 2024-12-07 06:47:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-07 07:09:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-07 07:12:04 --> ErrorException: Attempt to read property "polisi_id" on null
+[Method: GET, Route: Home/formedit/25]
+in APPPATH\Views\formedit.php on line 10.
+ 1 APPPATH\Views\formedit.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "polisi_id" on null', 'C:\\laragon\\www\\Project009\\app\\Views\\formedit.php', 10)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\Project009\\app\\Views\\formedit.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('formedit', [], true)
+ 5 APPPATH\Controllers\Home.php(140): view('formedit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->formedit('25')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Project009\\public\\index.php')
+CRITICAL - 2024-12-07 07:15:31 --> ErrorException: Attempt to read property "polisi_id" on null
+[Method: GET, Route: Home/formedit/25]
+in APPPATH\Views\formedit.php on line 10.
+ 1 APPPATH\Views\formedit.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "polisi_id" on null', 'C:\\laragon\\www\\Project009\\app\\Views\\formedit.php', 10)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\Project009\\app\\Views\\formedit.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('formedit', [], true)
+ 5 APPPATH\Controllers\Home.php(140): view('formedit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->formedit('25')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Project009\\public\\index.php')
+CRITICAL - 2024-12-07 07:21:33 --> ErrorException: Undefined variable $kriteria
+[Method: GET, Route: Home/editkonversi/25]
+in APPPATH\Views\update_kriteria.php on line 9.
+ 1 APPPATH\Views\update_kriteria.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kriteria', 'C:\\laragon\\www\\Project009\\app\\Views\\update_kriteria.php', 9)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\Project009\\app\\Views\\update_kriteria.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('update_kriteria', [], true)
+ 5 APPPATH\Controllers\Home.php(236): view('update_kriteria', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->formEditKonversi('25')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Project009\\public\\index.php')
+CRITICAL - 2024-12-07 07:25:33 --> ErrorException: Undefined variable $kriteria
+[Method: GET, Route: Home/editkonversi/25]
+in APPPATH\Views\update_kriteria.php on line 9.
+ 1 APPPATH\Views\update_kriteria.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kriteria', 'C:\\laragon\\www\\Project009\\app\\Views\\update_kriteria.php', 9)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\Project009\\app\\Views\\update_kriteria.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('update_kriteria', [], true)
+ 5 APPPATH\Controllers\Home.php(236): view('update_kriteria', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->formEditKonversi('25')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Project009\\public\\index.php')
+CRITICAL - 2024-12-07 07:34:19 --> ErrorException: Attempt to read property "kriteria_id" on null
+[Method: GET, Route: Home/editkonversi/25]
+in APPPATH\Views\edit_kriteria.php on line 10.
+ 1 APPPATH\Views\edit_kriteria.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "kriteria_id" on null', 'C:\\laragon\\www\\Project009\\app\\Views\\edit_kriteria.php', 10)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\Project009\\app\\Views\\edit_kriteria.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('edit_kriteria', [], true)
+ 5 APPPATH\Controllers\Home.php(236): view('edit_kriteria', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->formEditKonversi('25')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Project009\\public\\index.php')
+CRITICAL - 2024-12-07 07:35:19 --> ErrorException: Undefined variable $konversi_data
+[Method: GET, Route: Home/editkonversi/25]
+in APPPATH\Views\edit_konversi.php on line 9.
+ 1 APPPATH\Views\edit_konversi.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $konversi_data', 'C:\\laragon\\www\\Project009\\app\\Views\\edit_konversi.php', 9)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\Project009\\app\\Views\\edit_konversi.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('edit_konversi', [], true)
+ 5 APPPATH\Controllers\Home.php(236): view('edit_konversi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->formEditKonversi('25')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Project009\\public\\index.php')
+CRITICAL - 2024-12-07 07:37:56 --> ErrorException: Attempt to read property "id" on null
+[Method: GET, Route: Home/editkonversi/25]
+in APPPATH\Views\edit_konversi.php on line 9.
+ 1 APPPATH\Views\edit_konversi.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on null', 'C:\\laragon\\www\\Project009\\app\\Views\\edit_konversi.php', 9)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\Project009\\app\\Views\\edit_konversi.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('edit_konversi', [], true)
+ 5 APPPATH\Controllers\Home.php(236): view('edit_konversi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->formEditKonversi('25')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Project009\\public\\index.php')
+CRITICAL - 2024-12-07 07:42:46 --> ErrorException: Attempt to read property "id" on null
+[Method: GET, Route: Home/editkonversi/25]
+in APPPATH\Views\edit_konversi.php on line 9.
+ 1 APPPATH\Views\edit_konversi.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on null', 'C:\\laragon\\www\\Project009\\app\\Views\\edit_konversi.php', 9)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\Project009\\app\\Views\\edit_konversi.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('edit_konversi', [], true)
+ 5 APPPATH\Controllers\Home.php(258): view('edit_konversi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->formEditKonversi('25')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Project009\\public\\index.php')
+CRITICAL - 2024-12-07 07:43:38 --> ErrorException: Undefined variable $konversi_data
+[Method: GET, Route: Home/editkonversi/25]
+in APPPATH\Views\edit_konversi.php on line 9.
+ 1 APPPATH\Views\edit_konversi.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $konversi_data', 'C:\\laragon\\www\\Project009\\app\\Views\\edit_konversi.php', 9)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\Project009\\app\\Views\\edit_konversi.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('edit_konversi', [], true)
+ 5 APPPATH\Controllers\Home.php(258): view('edit_konversi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->formEditKonversi('25')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Project009\\public\\index.php')
+CRITICAL - 2024-12-07 07:50:43 --> ErrorException: Undefined variable $konversi_data
+[Method: GET, Route: Home/editkonversi/25]
+in APPPATH\Views\edit_konversi.php on line 9.
+ 1 APPPATH\Views\edit_konversi.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $konversi_data', 'C:\\laragon\\www\\Project009\\app\\Views\\edit_konversi.php', 9)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\Project009\\app\\Views\\edit_konversi.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('edit_konversi', [], true)
+ 5 APPPATH\Controllers\Home.php(258): view('edit_konversi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->formEditKonversi('25')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Project009\\public\\index.php')
+CRITICAL - 2024-12-07 07:51:34 --> ErrorException: Undefined variable $konversi_data
+[Method: GET, Route: Home/editkonversi/25]
+in APPPATH\Views\edit_konversi.php on line 9.
+ 1 APPPATH\Views\edit_konversi.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $konversi_data', 'C:\\laragon\\www\\Project009\\app\\Views\\edit_konversi.php', 9)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\Project009\\app\\Views\\edit_konversi.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('edit_konversi', [], true)
+ 5 APPPATH\Controllers\Home.php(258): view('edit_konversi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->formEditKonversi('25')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Project009\\public\\index.php')
+CRITICAL - 2024-12-07 07:51:49 --> ErrorException: Undefined variable $konversi_data
+[Method: GET, Route: Home/editkonversi/25]
+in APPPATH\Views\edit_konversi.php on line 12.
+ 1 APPPATH\Views\edit_konversi.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $konversi_data', 'C:\\laragon\\www\\Project009\\app\\Views\\edit_konversi.php', 12)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\Project009\\app\\Views\\edit_konversi.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('edit_konversi', [], true)
+ 5 APPPATH\Controllers\Home.php(258): view('edit_konversi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->formEditKonversi('25')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Project009\\public\\index.php')
+CRITICAL - 2024-12-07 08:47:47 --> BadMethodCallException: Call to undefined method App\Models\dataalternatif_model::getPolisiList
+[Method: GET, Route: Home/tambahkonversi]
+in SYSTEMPATH\Model.php on line 932.
+ 1 APPPATH\Controllers\Home.php(310): CodeIgniter\Model->__call('getPolisiList', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->tambahKonversi()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Project009\\public\\index.php')
+CRITICAL - 2024-12-07 08:49:21 --> BadMethodCallException: Call to undefined method App\Models\dataalternatif_model::getPolisiList
+[Method: GET, Route: Home/tambahkonversi]
+in SYSTEMPATH\Model.php on line 932.
+ 1 APPPATH\Controllers\Home.php(310): CodeIgniter\Model->__call('getPolisiList', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->tambahKonversi()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Project009\\public\\index.php')
+ERROR - 2024-12-07 08:52:38 --> mysqli_sql_exception: Table 'db_ppa.polisi' doesn't exist in C:\laragon\www\Project009\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\laragon\www\Project009\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\Project009\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\Project009\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\Project009\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\Project009\app\Models\dataalternatif_model.php(54): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Project009\app\Controllers\Home.php(311): App\Models\dataalternatif_model->getPolisiList()
+#6 C:\laragon\www\Project009\system\CodeIgniter.php(933): App\Controllers\Home->tambahKonversi()
+#7 C:\laragon\www\Project009\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\laragon\www\Project009\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\Project009\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\Project009\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\Project009\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\laragon\www\Project009\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#13 {main}
+CRITICAL - 2024-12-07 08:52:38 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_ppa.polisi' doesn't exist
+[Method: GET, Route: Home/tambahkonversi]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `polisi`', [], false)
+ 2 APPPATH\Models\dataalternatif_model.php(54): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(311): App\Models\dataalternatif_model->getPolisiList()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->tambahKonversi()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Project009\\public\\index.php')
+CRITICAL - 2024-12-07 08:52:38 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_ppa.polisi' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `polisi`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `polisi`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `polisi`', [], false)
+ 4 APPPATH\Models\dataalternatif_model.php(54): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Home.php(311): App\Models\dataalternatif_model->getPolisiList()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->tambahKonversi()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Project009\\public\\index.php')
+CRITICAL - 2024-12-07 08:52:38 --> [Caused by] mysqli_sql_exception: Table 'db_ppa.polisi' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *
+FROM `polisi`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `polisi`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `polisi`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `polisi`', [], false)
+ 5 APPPATH\Models\dataalternatif_model.php(54): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(311): App\Models\dataalternatif_model->getPolisiList()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->tambahKonversi()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Project009\\public\\index.php')
