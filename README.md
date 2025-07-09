@@ -1,3 +1,25 @@
+# Sistem Pendukung Keputusan Pemilihan Kanit PPA dengan Metode Weighted Product (WP)
+
+Proyek ini merupakan aplikasi web untuk membantu proses pengambilan keputusan dalam pemilihan Kepala Unit (Kanit) PPA menggunakan metode Weighted Product (WP). Sistem ini mengevaluasi kandidat berdasarkan kriteria tertentu, menghitung bobot, dan menghasilkan peringkat kandidat secara objektif.
+
+## Fitur Utama
+- Kelola Data Kriteria: Tambah, edit, dan hapus kriteria penilaian beserta bobot dan tipe (benefit/cost).
+![data kriteria](path/ke/gambar.png)
+- Kelola Alternatif (Kandidat): Daftarkan kandidat yang akan dinilai.
+![data alternatif](path/ke/gambar.png)
+- Proses Perhitungan WP:
+  - Konversi nilai alternatif ke skala yang sesuai.
+  ![data konversi](path/ke/gambar.png)
+  - Normalisasi bobot kriteria.
+  ![data normalisasi](path/ke/gambar.png)
+  - Perhitungan nilai preferensi (skor WP).
+  ![data preferensi](path/ke/gambar.png)
+  - Menampilkan hasil peringkat kandidat.
+  ![data rangking](path/ke/gambar.png)
+- Tampilkan hasil akhir peringkat kandidat berdasarkan skor tertinggi.
+
+--
+
 # CodeIgniter 4 Framework
 
 ## What is CodeIgniter?

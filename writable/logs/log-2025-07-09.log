@@ -1,0 +1,30 @@
+CRITICAL - 2025-07-09 12:53:15 --> ErrorException: Undefined property: CodeIgniter\View\View::$uri
+[Method: GET, Route: /]
+in APPPATH\Views\admin_nav.php on line 21.
+ 1 APPPATH\Views\admin_nav.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$uri', 'C:\\laragon\\www\\Project001\\app\\Views\\admin_nav.php', 21)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\Project001\\app\\Views\\admin_nav.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin_nav', [], true)
+ 5 APPPATH\Controllers\Home.php(18): view('admin_nav')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Project001\\public\\index.php')
+CRITICAL - 2025-07-09 12:53:39 --> ErrorException: Undefined property: CodeIgniter\View\View::$uri
+[Method: GET, Route: /]
+in APPPATH\Views\admin_nav.php on line 21.
+ 1 APPPATH\Views\admin_nav.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$uri', 'C:\\laragon\\www\\Project001\\app\\Views\\admin_nav.php', 21)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\Project001\\app\\Views\\admin_nav.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin_nav', [], true)
+ 5 APPPATH\Controllers\Home.php(18): view('admin_nav')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Project001\\public\\index.php')
